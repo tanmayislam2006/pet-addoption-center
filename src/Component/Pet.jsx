@@ -55,7 +55,7 @@ const Pet = ({ pet }) => {
               onClick={handleLikeButton}
               className="rounded-lg border px-4 py-2"
             >
-              {like ?'❤️' : '🤍'}
+              {like ? "❤️" : "🤍"}
             </button>
           </div>
           <div className="">
