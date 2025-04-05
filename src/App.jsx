@@ -12,11 +12,8 @@ const fetchPetsData=fetch("https://openapi.programming-hero.com/api/peddy/pets")
 const App = () => {
   return (
     <div>
-      <Suspense fallback={<Loading></Loading>
-
-    }>
-        <Pets fetchPetsData={fetchPetsData} >
-
+      <Suspense fallback={<h1>Loading............</h1>}>
+        <Pets fetchPetsData={fetchPetsData}>
         </Pets>
       </Suspense>
     </div>

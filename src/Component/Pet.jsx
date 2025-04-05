@@ -1,10 +1,15 @@
 import React, { useState } from "react";
 
-const Pet = ({ pet }) => {
+const Pet = ({ pet, handleAdpot }) => {
   const [like, setLike] = useState(false);
+  // const [adopt,setAdopt]=useState(false)
   const handleLikeButton = () => {
     setLike(!like);
   };
+  // const handleAdoptBtn=()=>{
+  //   handleAdpot(pet)
+  //   // setAdopt(!adopt);
+  // }
   const {
     petId,
     breed,
@@ -17,18 +22,6 @@ const Pet = ({ pet }) => {
     vaccinated_status,
     pet_name,
   } = pet;
-  console.log(
-    petId,
-    breed,
-    category,
-    date_of_birth,
-    price,
-    image,
-    gender,
-    pet_details,
-    vaccinated_status,
-    pet_name
-  );
   return (
     <div className="bg-gray-100 p-2 rounded-lg">
       <div className="rounded-lg border p-3 h-54 ">
@@ -64,7 +57,10 @@ const Pet = ({ pet }) => {
             </button>
           </div>
           <div className="">
-            <button className="text-green-800 bg-slate-100 font-bold rounded-lg px-3 py-2 border">
+            <button
+              onClick={() => handleAdpot(pet)}
+              className="text-green-800 bg-slate-100 font-bold rounded-lg px-3 py-2 border"
+            >
               Adopt
             </button>
           </div>
