@@ -20,9 +20,9 @@ const Pets = ({ fetchPetsData }) => {
         Total {pets.length}
       </h1>
       <div className="">
-        <h1 className="text-xl font-bold text-orange-500">Adopted Pet</h1>
-        <h2 className="">{adoptedPets.length}</h2>
-        <div className="">
+        <h1 className="text-xl text-center my-3 font-bold text-orange-500">Adopted Pet</h1>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex justify-center"><button onClick={()=>setAdoptedPets([])} className="px-4 py-2 rounded-lg bg-gray-300">Clear</button></div>
             {adoptedPets.map(pet=><AdoptedPet key={pet.petId} pet={pet}></AdoptedPet>)}
         </div>
       </div>
